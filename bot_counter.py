@@ -95,4 +95,4 @@ def valid_comments():
     if valid_comments==1000:
         assert(0)
 
-#valid_comments()
+valid_comments()
