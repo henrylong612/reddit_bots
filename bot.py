@@ -108,9 +108,17 @@ def generate_comment_markovify():
         elif c==']':
             in_bracket=False
 
-    text_model = markovify.Text(accumulator)
+    text_model_a = markovify.Text(accumulator)
+    text_model_b = markovify.Text(responding_to)
 
-    sentence='**'+text_model.make_sentence()+' '+text_model.make_sentence()+' '+text_model.make_sentence()+'**'
+    text_model = markovify.combine([text_model_a, text_model_b], [1,5])
+    try:
+        sentence='**'+text_model.make_sentence()+' '+text_model.make_sentence()+' '+text_model.make_sentence()+'**'
+    except TypeError:
+        generate_comment_madlibs()
+
+    print('responding_to=',responding_to)
+    print('sentence=',sentence)
 
     return sentence
 
@@ -125,10 +133,6 @@ args = parser.parse_args()
 reddit = praw.Reddit('bot'+args.bot_number)
 bot_name='botbombdotcom'+args.bot_number
 
-if args.markovify:
-    post=generate_comment_markovify()
-else:
-    post=generate_comment_madlibs()
 
 # FIXME:
 # select a "home" submission in the /r/cs40_2022fall subreddit to post to,
@@ -223,7 +227,11 @@ while True:
         # a top level comment is created when you reply to a post instead of a message
 
         try:
-            submission.reply(post)
+            if args.markovify:
+                responding_to=submission.title
+                submission.reply(generate_comment_markovify())
+            else:
+                submission.reply(generate_comment_madlibs())
             t=5
             while t:
                 mins, secs = divmod(t, 60)
@@ -306,7 +314,12 @@ while True:
         # these will not be top-level comments;
         # so they will not be replies to a post but replies to a message
         try:
-            random.choice(most_upvoted_comments_without_replies).reply(post)
+            if args.markovify:
+                comment_choice=random.choice(most_upvoted_comments_without_replies)
+                responding_to=comment_choice.body
+                comment_choice.reply(generate_comment_markovify())
+            else:
+                random.choice(most_upvoted_comments_without_replies).reply(generate_comment_madlibs())
         except praw.exceptions.RedditAPIException as e:
             for subexception in e.items:
                 if subexception.error_type=='RATELIMIT':

@@ -2,8 +2,9 @@ import argparse
 import praw
 
 # parse command line args
-parser = argparse.ArgumentParser(description='Debug/grading script for bot assignment')
-parser.add_argument('--bot_number',default='0')
+parser = argparse.ArgumentParser()
+parser.add_argument('--bot_number',default='3')
+parser.add_argument('--markovify',action='store_true')
 args = parser.parse_args()
 reddit = praw.Reddit('bot'+args.bot_number)
 bot_name='botbombdotcom'+args.bot_number
@@ -94,5 +95,3 @@ def valid_comments():
 
     if valid_comments==1000:
         assert(0)
-
-valid_comments()
