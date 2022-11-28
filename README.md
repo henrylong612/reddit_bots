@@ -24,15 +24,39 @@ valid_comments= 1000
 ```
 Output of `bot_counter.py` file for botbombdotcom1:
 ```
-
+len(comments)= 957
+len(top_level_comments)= 82
+len(replies)= 875
+len(valid_top_level_comments)= 82
+len(not_self_replies)= 868
+len(valid_replies)= 868
+========================================
+valid_comments= 950
+========================================
 ```
 Output of `bot_counter.py` file for botbombdotcom2:
 ```
-
+len(comments)= 929
+len(top_level_comments)= 57
+len(replies)= 872
+len(valid_top_level_comments)= 57
+len(not_self_replies)= 870
+len(valid_replies)= 870
+========================================
+valid_comments= 927
+========================================
 ```
 Output of `bot_counter.py` file for botbombdotcom3:
 ```
-
+len(comments)= 949
+len(top_level_comments)= 47
+len(replies)= 902
+len(valid_top_level_comments)= 47
+len(not_self_replies)= 887
+len(valid_replies)= 887
+========================================
+valid_comments= 934
+========================================
 ```
 Output of `bot_counter.py` file for botbombdotcom4:
 ```
