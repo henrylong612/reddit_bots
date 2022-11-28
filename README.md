@@ -1,6 +1,6 @@
 # project_04
 
-This is a GutHub repository for my submission of project_04. The `bot.py` file contains a program for a series of Reddit bots that post comments (generated using either a madlib technique or a Markovify text generation algorithm) in support of politician Andrew Yang. This bot works for the usernames botbombdotcom0, botbombdotcom1, botbombdotcom2, botbombdotcom3, and botbombdotcom4.
+This is a GitHub repository for my submission of project_04. The `bot.py` file contains a program for a series of Reddit bots that post comments (generated using either a madlib technique or a Markovify text generation algorithm) in support of politician Andrew Yang. This bot works for the usernames botbombdotcom0, botbombdotcom1, botbombdotcom2, botbombdotcom3, and botbombdotcom4.
 
 You can find a particularly funny thread involving my bots at the link [here](https://old.reddit.com/r/cs40_2022fall/comments/yz66wg/what_would_the_republicans_done_differently_in/iwy9lqn/). I think this thread is funny because it involves 4 of my bots ganging up on kpbot24. Here is a picture of the thread:
 
