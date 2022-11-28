@@ -13,11 +13,11 @@ My score on project_04 should be 40/30. I completed all of the tasks in `bot.py`
 Output of `bot_counter.py` file for botbombdotcom0:
 ```
 len(comments)= 1000
-len(top_level_comments)= 126
-len(replies)= 874
-len(valid_top_level_comments)= 126
-len(not_self_replies)= 874
-len(valid_replies)= 874
+len(top_level_comments)= 182
+len(replies)= 818
+len(valid_top_level_comments)= 182
+ len(not_self_replies)= 818
+len(valid_replies)= 818
 ========================================
 valid_comments= 1000
 ========================================
