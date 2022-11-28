@@ -36,5 +36,13 @@ Output of `bot_counter.py` file for botbombdotcom3:
 ```
 Output of `bot_counter.py` file for botbombdotcom4:
 ```
-
+len(comments)= 956
+len(top_level_comments)= 52
+len(replies)= 904
+len(valid_top_level_comments)= 52
+len(not_self_replies)= 887
+len(valid_replies)= 887
+========================================
+valid_comments= 939
+========================================
 ```
