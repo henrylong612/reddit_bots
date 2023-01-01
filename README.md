@@ -1,4 +1,4 @@
-# project_04
+# Reddit Bots
 
 This GitHub repository contains my submission for project_04 of Mike Izbicki's CS40 class. Instructions for project_03 can be found [here](https://github.com/mikeizbicki/cmc-csci040/tree/2022fall/project_04). The `bot.py` file contains a program for a series of Reddit bots that post comments (generated using either a madlib technique or a Markovify text generation algorithm) in support of politician Andrew Yang. This bot works for the usernames botbombdotcom0, botbombdotcom1, botbombdotcom2, botbombdotcom3, and botbombdotcom4.
 
